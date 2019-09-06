@@ -2,6 +2,9 @@ import { DynamicTabProps } from "../components/DynamicTabs";
 import { DynamicTreeViewConfig } from '../components/DynamicTreeView';
 import { CommentsProps} from '../components/CommentPanel';
 import { AddCommentConfig } from '../components/CreateComment';
+import { WorkflowContextModalProps } from "../components/WorkflowContextView/_components/WorkflowContext/_dataTypes";
+
+
 export const dynamicTabProps: DynamicTabProps = {
     tabsUrl: "http://localhost:3001/jda/tabs", // TODO: Should be able to accept JSON or a callback to getch data
     collapsibelTreeView: false,
@@ -58,4 +61,11 @@ export const commentPanelProps: CommentsProps = {
     setRating: () => {},
     addComment: () => {},
     clearComment: () => {},
+};
+
+export const workflowContextModalConfig: WorkflowContextModalProps = {
+  workflowModalUrl: "http://localhost:3001/jda/workflowcontext",
+  loading: true,
+  WorkflowContextItems: [],
+  getWorkflowContextItems: () => {}
 };
