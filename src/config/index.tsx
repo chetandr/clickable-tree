@@ -1,6 +1,9 @@
 import { DynamicTabProps } from "../components/DynamicTabs";
 import { DynamicTreeViewConfig } from '../components/DynamicTreeView';
 import { DynamicKPIProps } from "../components/DynamicKPI";
+import { CommentsProps} from '../components/CommentPanel';
+import { AddCommentConfig } from '../components/CreateComment';
+import { WorkflowContextModalProps } from "../components/WorkflowContextView/_components/WorkflowContext/_dataTypes";
 
 export const dynamicTabProps: DynamicTabProps = {
     tabsUrl: "http://localhost:3001/jda/tabs", // TODO: Should be able to accept JSON or a callback to getch data
@@ -34,7 +37,6 @@ export const dynamicTreeViewProps: DynamicTreeViewConfig ={
     updateButtonLabel: "Update view",
     loading: true
 }
-
 export const kpiViewProps: DynamicKPIProps = {
   kpiUrl: "http://localhost:3001/jda/kpiimpact",
   loading: true,
@@ -96,3 +98,35 @@ export const ModelViewProps = {
   applications: applicationsProps,
   typeRadio: typeProps,
 }
+
+export const commentPanelProps: CommentsProps = {
+    commentList:[],
+    getCommentList: () => {},
+    commentUrl: "http://localhost:3001/jda/comments",
+    loading: true
+  };
+
+  export const createCommentProps: AddCommentConfig = {
+    ColumnName: ['Comments', 'Resolution Pros', 'Resolution Cons', 'Scenario Rating', 'Approval (Required)'],
+    comment: '',
+    resolutionPros: '',
+    resolutionCons: '',
+    rating: '',
+    approval: '',
+    loading: true,
+    setComment: () => {},
+    setResolutionPros: () => {},
+    setResolutionCons: () => {},
+    setScenario: () => {},
+    setApproval: () => {},
+    setRating: () => {},
+    addComment: () => {},
+    clearComment: () => {},
+};
+
+export const workflowContextModalConfig: WorkflowContextModalProps = {
+  workflowModalUrl: "http://localhost:3001/jda/workflowcontext",
+  loading: true,
+  WorkflowContextItems: [],
+  getWorkflowContextItems: () => {}
+};
