@@ -39,7 +39,6 @@ const App: React.FC = () => {
           </Grid>
           </div>
     </Provider>
-    
   );
 };
 
