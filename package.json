@@ -80,7 +80,7 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "jest-mock-axios": "^3.1.0",
     "sinon": "^7.4.1",
-    "testcafe": "^1.4.0",
+    "testcafe": "^1.20.1",
     "testcafe-react-selectors": "^3.1.0"
   },
   "author": "",
